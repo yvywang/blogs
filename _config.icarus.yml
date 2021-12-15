@@ -223,13 +223,13 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Your name
+        author: yvywang
         # Author title
-        author_title: Your title
+        author_title: dev log
         # Author's current location
-        location: Your location
+        location: 广东 广州
         # URL or path to the avatar image
-        avatar: 
+        avatar: http://wx.qlogo.cn/mmhead/wzJhLVPsrd0u55Y36miaH3fCnibwkXADQ5e8icXIpRFkBX8WKk9JI6fnw/0
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
