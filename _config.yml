@@ -1,12 +1,12 @@
-title: Hexo
+title: Yu Blog
 subtitle: ''
 description: ''
 keywords: null
 author: John Doe
 language: en
 timezone: ''
-url: http://example.com
-root: /blogs
+url: https://yvywang.github.io/blogs
+root: /blogs/
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
