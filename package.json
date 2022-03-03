@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "release": "yarn clean | yarn build | yarn deploy"
+    "release": "yarn clean && yarn build && yarn deploy"
   },
   "hexo": {
     "version": "5.4.0"
@@ -27,5 +28,10 @@
     "hexo-server": "^2.0.0",
     "hexo-theme-icarus": "^4.4.0",
     "hexo-theme-landscape": "^0.0.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "husky": "^7.0.4"
   }
 }

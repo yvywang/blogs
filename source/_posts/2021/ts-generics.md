@@ -1,7 +1,7 @@
 ---
-title: TypeScript 泛型
+title: ts 泛型
 date: 2021-12-15 19:22:14
-tags: TypeScript
+tags: [TypeScript]
 ---
 
 ## 概述

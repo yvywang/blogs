@@ -7,7 +7,9 @@ tags: [Markdown]
 
 ## Markdown
 
-本文将介绍 Markdown 的语法以及在编写的一些小 tips。
+本文将介绍 Markdown 基本使用语法。
+
+<!--more-->
 
 ### 标题语法
 
