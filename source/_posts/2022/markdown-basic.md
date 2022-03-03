@@ -5,7 +5,7 @@ date: 2022-02-28 14:16:58
 tags: [Markdown]
 ---
 
-## Markdown
+## 概述
 
 本文将介绍 Markdown 基本使用语法。
 
@@ -30,6 +30,7 @@ tags: [Markdown]
 #### 粗体 (Bold)
 
 加粗文本有两种方式，在单词或短语的前后各添加两个 `*` 或 `_` 。需要注意的是，`Markdown` 在如何处理单词或短语中间的下划线并不一致，考虑其兼容性，在单词或短语中间部分加粗的话，请使用 `*`。
+
 | Markdown                    | Html                                     | preview                                |
 | --------------------------- | ---------------------------------------- | -------------------------------------- |
 | `I just test **bold text**` | `I just test <strong>bold text</strong>` | I just test <strong>bold text</strong> |
