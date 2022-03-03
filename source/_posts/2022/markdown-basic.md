@@ -158,7 +158,8 @@ ______
 
 #### 网址和Email地址
 
-使用尖括号可以很方便地把URL或者email地址变为可点击的链接
+使用尖括号可以很方便地把URL或者email地址变为可点击的链接。
+
 ```
 <https://yvywang.github.io/blogs/>
 <fake@example.com>
