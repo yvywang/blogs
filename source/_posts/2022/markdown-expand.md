@@ -22,6 +22,7 @@ tags: [Markdown]
 ```
 
 输出如下：
+
 | Syntax    | Description |
 | --------- | ----------- |
 | Header    | Title       |
@@ -39,6 +40,7 @@ tags: [Markdown]
 ```
 
  输出如下：
+ 
  | Syntax    | Description |   Test Text |
  | :-------- | :---------: | ----------: |
  | Header    |    Title    | Here's this |
