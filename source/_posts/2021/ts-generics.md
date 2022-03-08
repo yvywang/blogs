@@ -1,5 +1,6 @@
 ---
 title: ts 泛型
+author: Yu
 date: 2021-12-15 19:22:14
 tags: [TypeScript]
 ---

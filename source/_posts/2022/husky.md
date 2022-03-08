@@ -1,5 +1,6 @@
 ---
 title: husky 使用总结
+author: Yu
 date: 2022-03-02 20:14:35
 tags: [husky]
 ---
