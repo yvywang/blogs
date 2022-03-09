@@ -2,7 +2,7 @@
 title: husky 使用总结
 author: Yu
 date: 2022-03-02 20:14:35
-cover: https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203091459821.jpeg
+cover: https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203091535536.png
 tags: [husky]
 categories: [husky]
 ---

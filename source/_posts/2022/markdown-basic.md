@@ -2,7 +2,7 @@
 title: Markdown 基本语法
 author: Yu
 date: 2022-02-28 14:16:58
-cover: https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203091453235.jpeg
+cover: https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203091534430.png
 tags: [Markdown]
 categories: [Markdown, basic]
 ---

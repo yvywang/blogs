@@ -3,7 +3,7 @@ title: Visual Studio Code 常用快捷键
 author: Yu
 toc: true
 date: 2022-03-08 12:57:08
-cover: https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203091450238.png
+cover: https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203091529241.png
 tags: [vsocde]
 categories: [vscode, shortcut]
 ---
