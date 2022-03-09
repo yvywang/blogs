@@ -1,6 +1,7 @@
 ---
 title: Markdown 基本语法
 author: Yu
+toc: true
 date: 2022-02-28 14:16:58
 cover: https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203091534430.png
 tags: [Markdown]
@@ -191,3 +192,6 @@ See the section on [`code`](#code).
 
 给图片增加链接，拥有跳转的特性，在语法外多加一层中括号，最后面多加一个括号填写超链接地址
 `[![图片alt](图片链接 "图片title")](https://yvywang.github.io/blogs/)`
+
+### 参考
+* [Markdown 基本语法](https://markdown.com.cn/basic-syntax/)

@@ -47,4 +47,3 @@ categories: [vscode, shortcut]
 **<font face="微软雅黑" color="#f14668">Tips:</font>**
 `command[⌘] + shift[⇧] + P` 打开 Vscode 可配置列表
 `code .` 使用 Vsocde 打开当前终端所在的目录
-

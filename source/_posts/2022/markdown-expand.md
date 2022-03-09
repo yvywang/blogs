@@ -2,12 +2,13 @@
 title: Markdown 扩展语法
 date: 2022-03-03 14:33:29
 author: Yu
+toc: true
 cover: https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203091534863.png
 tags: [Markdown]
 categories: [Markdown, advanced]
 ---
 
-### 概述
+## 概述
 
 基本语法主要是为了应付大多数情况下的日常所需元素，但对于个别人群来说还不够，这就是扩展语法的用武之地，本文将介绍它的使用。
 
@@ -232,3 +233,6 @@ http://www.example.com
 
 输出如下：
 `http://www.example.com`
+
+### 参考
+* [Markdown 扩展语法](https://markdown.com.cn/extended-syntax/)
