@@ -18,14 +18,6 @@ categories: [Markdown, basic]
 
 创建标题时，在单词或短语前添加 `#` 号， `#` 号的数量代表了当前标题的级别，例如, `###` 即表示创建一个三级标题 `<h3 />`
 
-| Markdown                | Html                       | preview                  |
-| ----------------------- | -------------------------- | ------------------------ |
-| `# Heading level 1`     | `<h1>Heading level 1</h1>` | <h1>Heading level 1</h1> |
-| `## Heading level 2`    | `<h2>Heading level 2</h2>` | <h2>Heading level 2</h2> |
-| `### Heading level 3`   | `<h3>Heading level 3</h3>` | <h3>Heading level 3</h3> |
-| `#### Heading level 4`  | `<h4>Heading level 4</h4>` | <h4>Heading level 4</h4> |
-| `##### Heading level 5` | `<h5>Heading level 5</h5>` | <h5>Heading level 5</h5> |
-
 ## 强调语法
 
 通过更改文本字体样式来凸显其重点。
