@@ -64,3 +64,9 @@ theme: icarus
 deploy:
   type: git
   repository: git@github.com:yvywang/blogs.git
+nofollow:
+  enable: true
+  field: site
+  exclude:
+    - "https://yvywang.github.io"
+counter: true
