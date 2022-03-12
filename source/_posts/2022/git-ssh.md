@@ -11,9 +11,9 @@ categories: [git, ssh]
 ## 概述
 
 这里记录一下在 mac 配置 ssh key 。
-
 开发过程中，向 `github` 的项目提交代码时， `github` 需要知道你当前设备上有没有 `Deploy keys` 中某个 `public key` 配对的 `private key`。
 
+<!-- more -->
 ## ssh-keygen
 
  ssh-keygen 是一个认证密钥的生成、管理和转换的工具。采用密钥对的形式，生成一个私钥和一个公钥。
