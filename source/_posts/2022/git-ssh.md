@@ -70,7 +70,7 @@ categories: [git, ssh]
 
 将生成的 `.pub` 后缀文件也就是公钥，添加到 `github` 或其他 `代码托管平台` 对应项目的 Deploy keys 中。\
 
-![img](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203111519747.png)
+![Deploy keys](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203111519747.png)
 
 `ssh ` 服务器默认是去 `ssh` 找 `id_rsa`, 现在需要吧我们生成的 `key` 添加到 `ssh-agent` 中，这样 `ssh` 服务器才能匹配找到生成的 `key`
 
@@ -117,7 +117,7 @@ $ ssh -T git@TestSSH.github.com
 #### 发现
 
 在 `linux` 手册可以了解到 `ssh-add` 是把密钥添加到 `ssh-agent` 的高速缓存中。
-![img](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203112057980.png)
+![linux 手册](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203112057980.png)
 
 那么每次 `ssh` 鉴权的时候，只要指定了密钥就可以快速验证，既然重启后就没了，那么就可以确定这个高速缓存存储是在内存里的。
 
@@ -132,22 +132,22 @@ $ ssh -T git@TestSSH.github.com
 
 下面讲讲`方案二`。
 1. 在 `mac` 中有一个 `GUI` 软件可以设置一些脚本， 它就是 `自动操作`
-![img](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203121812254.png)
+![聚焦搜索]](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203121812254.png)
 
 2. 打开应用后，在弹出来的窗口中点击`新建文稿`
-![img](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203121813412.png)
+![](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203121813412.png)
 
 3. 在又弹出来的窗口选择`应用程序`
-![img](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203121811438.png)
+![](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203121811438.png)
 
-4. 搜索 `shell` 后，将 `运行Shell脚本` 拖到右侧 `输入` 区域。
-![img](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203122216765.png)
+1. 搜索 `shell` 后，将 `运行Shell脚本` 拖到右侧 `输入` 区域。
+![](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203122216765.png)
 
-5. 在脚本里面输入要执行的语句 `ssh-add -K ~/.ssh/xxx`，然后点击右上角的运行看是否能通过。
+1. 在脚本里面输入要执行的语句 `ssh-add -K ~/.ssh/xxx`，然后点击右上角的运行看是否能通过。
 
-6.  `command + s` 保存到你想要放置的地方。
-7. 在 `系统偏好设置 - 用户与群组 - 登陆项` 点击下面的 `+` 号，将刚刚添加的脚本添加到这个列表，这里相当于钩子，每次开机都会执行一次这里的列表任务。
-![img](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203122224130.png)
+2.  `command + s` 保存到你想要放置的地方。
+3. 在 `系统偏好设置 - 用户与群组 - 登陆项` 点击下面的 `+` 号，将刚刚添加的脚本添加到这个列表，这里相当于钩子，每次开机都会执行一次这里的列表任务。
+![](https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203122224130.png)
 
 ## 参考
 
