@@ -152,3 +152,8 @@ console.error() // - 打印一个错误信息。并显示其堆栈
         </td>
     </tr>
 </table>
+
+
+## 参考
+
+* [JavaScript Console 对象](https://www.runoob.com/w3cnote/javascript-console-object.html)
