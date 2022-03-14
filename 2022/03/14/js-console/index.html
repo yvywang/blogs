@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>console 输出 - Yu Blog</title><link rel="manifest" href="/blogs/manifest.json"><meta name="application-name" content="Yu Blog"><meta name="msapplication-TileImage" content="/images/y.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Yu Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="概述在查看日志，输出调试，常用到 console ，这里深入介绍一下它的用法。"><meta property="og:type" content="blog"><meta property="og:title" content="console 输出"><meta property="og:url" content="https://yvywang.github.io/blogs/2022/03/14/js-console/"><meta property="og:site_name" content="Yu Blog"><meta property="og:description" content="概述在查看日志，输出调试，常用到 console ，这里深入介绍一下它的用法。"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203141322495.png"><meta property="article:published_time" content="2022-03-14T05:13:49.000Z"><meta property="article:modified_time" content="2022-03-14T12:09:19.974Z"><meta property="article:author" content="Yu"><meta property="article:tag" content="JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203141322495.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yvywang.github.io/blogs/2022/03/14/js-console/"},"headline":"console 输出","image":["https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203141322495.png"],"datePublished":"2022-03-14T05:13:49.000Z","dateModified":"2022-03-14T12:09:19.974Z","author":{"@type":"Person","name":"Yu"},"publisher":{"@type":"Organization","name":"Yu Blog","logo":{"@type":"ImageObject","url":"https://yvywang.github.io/images/y.svg"}},"description":"概述在查看日志，输出调试，常用到 console ，这里深入介绍一下它的用法。"}</script><link rel="canonical" href="https://yvywang.github.io/blogs/2022/03/14/js-console/"><link rel="icon" href="/blogs/images/y.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/blogs/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 6.1.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/blogs/"><img src="/blogs/images/y.svg" alt="Yu Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/blogs/">Home</a><a class="navbar-item" href="/blogs/archives">Archives</a><a class="navbar-item" href="/blogs/categories">Categories</a><a class="navbar-item" href="/blogs/tags">Tags</a><a class="navbar-item" href="/blogs/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener external nofollow noreferrer" title="Download on GitHub" href="https://github.com/yvywang/blogs"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;" rel="external nofollow noreferrer"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;" rel="external nofollow noreferrer"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203141322495.png" alt="console 输出"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-03-14T05:13:49.000Z" title="2022/3/14 下午1:13:49">2022-03-14</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-03-14T12:09:19.974Z" title="2022/3/14 下午8:09:19">2022-03-14</time></span><span class="level-item"> Yu </span><span class="level-item"><a class="link-muted" href="/blogs/categories/JavaScript/">JavaScript</a><span> / </span><a class="link-muted" href="/blogs/categories/JavaScript/console/">console</a></span><span class="level-item">3 minutes read (About 460 words)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>&nbsp;visits</span></div></div><h1 class="title is-3 is-size-4-mobile">console 输出</h1><div class="content"><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在查看日志，输出调试，常用到 <code>console</code> ，这里深入介绍一下它的用法。</p>
+<span id="more"></span>
+
+<h2 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h2><table>
+<thead>
+<tr>
+<th>key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>%s</code></td>
+<td>字符串</td>
+</tr>
+<tr>
+<td><code>%d</code> / <code>%i</code></td>
+<td>整数</td>
+</tr>
+<tr>
+<td><code>%f</code></td>
+<td>浮点数</td>
+</tr>
+<tr>
+<td><code>%o</code></td>
+<td>可展开DOM</td>
+</tr>
+<tr>
+<td><code>%O</code></td>
+<td>列出DOM的属性</td>
+</tr>
+<tr>
+<td><code>%c</code></td>
+<td>css样式格式化输出的字符串</td>
+</tr>
+</tbody></table>
+<p><strong>示例</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;%d年%d月%d日&quot;</span>,<span class="number">2022</span>,<span class="number">03</span>,<span class="number">14</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c Hello World&#x27;</span>, <span class="string">&#x27;color: pink; background: blue;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="常见"><a href="#常见" class="headerlink" title="常见"></a>常见</h2><p>常见的控制台方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>() <span class="comment">// - 打印内容的通用方法。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">info</span>() <span class="comment">// - 打印资讯类说明信息</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">debug</span>() <span class="comment">// - 控制台打印 &#x27;debug&#x27;级别的信息。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">warn</span>() <span class="comment">// - 打印一个警告信息。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">error</span>() <span class="comment">// - 打印一个错误信息。并显示其堆栈</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><p>这一块的方法相对少用，科普一下，起码不能不知道 😄</p>
+<p><strong>Console 对象方法</strong></p>
+<table>
+    <tr>
+        <th>Method</th>
+        <th>Description</th>
+        <th>Demo</th>
+    </tr>
+    <tr>
+        <td>assert</td>
+        <td>该方法接受两个参数 ( 表达式, 字符串 ) 只有当表达式不成立，才会输出打印字符串</td>
+        <td>
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">assert</span>( <span class="number">1</span> === <span class="number">2</span>, <span class="string">&quot;不相等&quot;</span>)</span><br><span class="line"><span class="comment">// error - Assertion failed: 不相等</span></span><br></pre></td></tr></table></figure>
+        </td>
+    </tr>
+    <tr>
+        <td>clear</td>
+        <td>清除当前控制台的所有输出，将光标回置到第一行</td>
+        <td>
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">clear</span>()</span><br></pre></td></tr></table></figure>
+        </td>
+    </tr>
+    <tr>
+        <td>group</td>
+        <td>将打印的信息进行分组，可以折叠和展开查看</td>
+        <td>
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">group</span>(<span class="string">&#x27;ul&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">warn</span>(<span class="string">&#x27;warn&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;error&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupEnd</span>()</span><br></pre></td></tr></table></figure>
+        </td>
+    </tr>
+    <tr>
+        <td>groupCollapsed</td>
+        <td>和 group 方法类似，唯一区别就是初始状态是折叠的</td>
+        <td>
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupCollapsed</span>(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">warn</span>(<span class="string">&#x27;warn&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;error&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupEnd</span>();</span><br></pre></td></tr></table></figure>
+        </td>
+    </tr>
+    <tr>
+        <td>table</td>
+        <td>将复合类型的数据转为表格显示</td>
+        <td>
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    <span class="attr">a</span>:&#123; <span class="attr">num</span>: <span class="string">&quot;1&quot;</span>&#125;,</span><br><span class="line">    <span class="attr">b</span>:&#123; <span class="attr">num</span>: <span class="string">&quot;2&quot;</span>&#125;,</span><br><span class="line">    <span class="attr">c</span>:&#123; <span class="attr">num</span>: <span class="string">&quot;3&quot;</span> &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">table</span>(obj)</span><br></pre></td></tr></table></figure>
+        </td>
+    </tr>
+    <tr>
+        <td>time</td>
+        <td>通常用来计时，和 timeEnd 搭配使用</td>
+        <td>
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">time</span>(<span class="string">&#x27;timer&#x27;</span>)</span><br><span class="line"><span class="comment">// code...</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeEnd</span>(<span class="string">&#x27;timer&#x27;</span>)</span><br></pre></td></tr></table></figure>
+        </td>
+    </tr>
+    <tr>
+        <td>trace</td>
+        <td>追踪函数的调用过程</td>
+        <td>
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">fun</span> = (<span class="params"></span>) =&gt; <span class="variable language_">console</span>.<span class="title function_">trace</span>()</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">a</span> = (<span class="params"></span>) =&gt; <span class="title function_">fun</span>()</span><br><span class="line"><span class="keyword">const</span> res = <span class="title function_">a</span>()</span><br></pre></td></tr></table></figure>
+        </td>
+    </tr>
+    <tr>
+        <td>count</td>
+        <td>用于计数，每执行一次 count 所标记的 字符串 都会打印当前执行的次数</td>
+        <td>
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> count = <span class="number">10</span></span><br><span class="line"><span class="keyword">while</span>(count--)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">count</span>(<span class="string">&#x27;test&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// log - test: 1</span></span><br><span class="line"><span class="comment">// log - test: 2</span></span><br><span class="line"><span class="comment">// ······</span></span><br><span class="line"><span class="comment">// log - test: 10</span></span><br></pre></td></tr></table></figure>
+        </td>
+    </tr>
+</table>
+</div><div class="article-licensing box"><div class="licensing-title"><p>console 输出</p><p><a href="https://yvywang.github.io/blogs/2022/03/14/js-console/">https://yvywang.github.io/blogs/2022/03/14/js-console/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Yu</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-03-14</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-03-14</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener external nofollow noreferrer" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener external nofollow noreferrer" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener external nofollow noreferrer" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/blogs/tags/JavaScript/">JavaScript</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/blogs/images/IMG_0785.JPG" alt="Alipay"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/blogs/images/IMG_0783.JPG" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/blogs/2022/03/11/git-ssh/"><span class="level-item">ssh 配置</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "4c522b40f05893308c17017644830eb5",
+            repo: "blogs",
+            owner: "yvywang",
+            clientID: "1329277f33adf235b556",
+            clientSecret: "e2832e7f584d921e389a37f35797a900c183aa04",
+            admin: ["yvywang"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#概述"><span class="level-left"><span class="level-item">1</span><span class="level-item">概述</span></span></a></li><li><a class="level is-mobile" href="#占位符"><span class="level-left"><span class="level-item">2</span><span class="level-item">占位符</span></span></a></li><li><a class="level is-mobile" href="#常见"><span class="level-left"><span class="level-item">3</span><span class="level-item">常见</span></span></a></li><li><a class="level is-mobile" href="#进阶"><span class="level-left"><span class="level-item">4</span><span class="level-item">进阶</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/blogs/js/toc.js" defer></script></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=github/Ptyw&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="github/Ptyw" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div><p class="help">邮件订阅，更新早知道</p></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/blogs/"><img src="/blogs/images/y.svg" alt="Yu Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener external nofollow noreferrer">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener external nofollow noreferrer">Icarus</a><br><span id="busuanzi_container_site_uv">Visited by <span id="busuanzi_value_site_uv">0</span> users</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener external nofollow noreferrer" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener external nofollow noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener external nofollow noreferrer" title="Download on GitHub" href="https://github.com/yvywang/blogs"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/blogs/js/column.js"></script><script src="/blogs/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;" rel="external nofollow noreferrer"><i class="fas fa-chevron-up"></i></a><script src="/blogs/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/blogs/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;" rel="external nofollow noreferrer">×</a></div><div class="searchbox-body"></div></div></div><script src="/blogs/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/blogs/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
