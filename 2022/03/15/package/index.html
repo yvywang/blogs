@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>package 文档 - Yu Blog</title><link rel="manifest" href="/blogs/manifest.json"><meta name="application-name" content="Yu Blog"><meta name="msapplication-TileImage" content="/images/y.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Yu Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="概述本文简单说一些 package.json 使用的点。"><meta property="og:type" content="blog"><meta property="og:title" content="package 文档"><meta property="og:url" content="https://yvywang.github.io/blogs/2022/03/15/package/"><meta property="og:site_name" content="Yu Blog"><meta property="og:description" content="概述本文简单说一些 package.json 使用的点。"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203151530867.png"><meta property="article:published_time" content="2022-03-15T07:13:31.000Z"><meta property="article:modified_time" content="2022-03-15T10:00:48.074Z"><meta property="article:author" content="Yu"><meta property="article:tag" content="package"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203151530867.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yvywang.github.io/blogs/2022/03/15/package/"},"headline":"package 文档","image":["https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203151530867.png"],"datePublished":"2022-03-15T07:13:31.000Z","dateModified":"2022-03-15T10:00:48.074Z","author":{"@type":"Person","name":"Yu"},"publisher":{"@type":"Organization","name":"Yu Blog","logo":{"@type":"ImageObject","url":"https://yvywang.github.io/images/y.svg"}},"description":"概述本文简单说一些 package.json 使用的点。"}</script><link rel="canonical" href="https://yvywang.github.io/blogs/2022/03/15/package/"><link rel="icon" href="/blogs/images/y.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/blogs/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 6.1.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/blogs/"><img src="/blogs/images/y.svg" alt="Yu Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/blogs/">Home</a><a class="navbar-item" href="/blogs/archives">Archives</a><a class="navbar-item" href="/blogs/categories">Categories</a><a class="navbar-item" href="/blogs/tags">Tags</a><a class="navbar-item" href="/blogs/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener external nofollow noreferrer" title="Download on GitHub" href="https://github.com/yvywang/blogs"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;" rel="external nofollow noreferrer"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;" rel="external nofollow noreferrer"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://cdn.jsdelivr.net/gh/yvywang/figure-bed@main/img/202203151530867.png" alt="package 文档"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-03-15T07:13:31.000Z" title="2022/3/15 下午3:13:31">2022-03-15</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-03-15T10:00:48.074Z" title="2022/3/15 下午6:00:48">2022-03-15</time></span><span class="level-item"> Yu </span><span class="level-item"><a class="link-muted" href="/blogs/categories/node/">node</a><span> / </span><a class="link-muted" href="/blogs/categories/node/package/">package</a></span><span class="level-item">2 minutes read (About 251 words)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>&nbsp;visits</span></div></div><h1 class="title is-3 is-size-4-mobile">package 文档</h1><div class="content"><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本文简单说一些 <code>package.json</code> 使用的点。</p>
+<span id="more"></span>
+
+<h2 id="Scripts-脚本"><a href="#Scripts-脚本" class="headerlink" title="Scripts 脚本"></a>Scripts 脚本</h2><table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>prepublish</code></td>
+<td><code>publish</code> or <code>npm install（ 不带参数 ）</code> 前执行</td>
+</tr>
+<tr>
+<td><code>prepare</code></td>
+<td><code>prepublish</code>后， <code>prepublishOnly</code> 前 or <code>npm install（ 不带参数 ）</code> 前 执行</td>
+</tr>
+<tr>
+<td><code>prepublishOnly</code></td>
+<td><code>publish</code> 前执行</td>
+</tr>
+<tr>
+<td><code>publish, postpublish</code></td>
+<td><code>publish</code> 后执行</td>
+</tr>
+<tr>
+<td><code>preinstall </code></td>
+<td><code>install</code> 前执行</td>
+</tr>
+<tr>
+<td><code>install, postinstall</code></td>
+<td><code>npm install</code> 后执行</td>
+</tr>
+<tr>
+<td><code>preuninstall, uninstall</code></td>
+<td><code>npm uninstall</code> 前执行</td>
+</tr>
+<tr>
+<td><code>postuninstall</code></td>
+<td><code>npm uninstall</code> 后执行</td>
+</tr>
+<tr>
+<td><code>preversion</code></td>
+<td><code>npm version xxx</code> 前执行 (更新版本)</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>更新版本,提交 <code>commit</code> 前执行</td>
+</tr>
+<tr>
+<td><code>postversion</code></td>
+<td>更新版本，提交 <code>commit</code> 后执行</td>
+</tr>
+<tr>
+<td><code>pretest, posttest</code></td>
+<td><code>npm test</code> 的勾子</td>
+</tr>
+<tr>
+<td><code>prestop, poststop</code></td>
+<td><code>npm stop</code> 的勾子</td>
+</tr>
+<tr>
+<td><code>prestart, poststart</code></td>
+<td><code>npm start</code> 的勾子</td>
+</tr>
+<tr>
+<td><code>prerestart, postrestart</code></td>
+<td><code>npm restart</code> 的勾子（ 如无配置 <code>restart</code>， 则会执行 <code>start &amp;&amp; stop</code>  ）</td>
+</tr>
+<tr>
+<td><code>preshrinkwrap, postshrinkwrap</code></td>
+<td><code>npm shrinkwrap</code> 的勾子（ 用于固定依赖版本 ）</td>
+</tr>
+</tbody></table>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>所有的 <code>script</code> 都有自己的 <code>pre, post</code> 勾子，执行配置的 <code>scripts</code> 时，会自动匹配执行对应的勾子；依赖包里面 <code>package.json</code> 的 <code>scripts</code> 可以用 <code>npm explore &lt;pkg&gt; -- npm run &lt;script&gt;</code> 执行</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.npmjs.com/cli/v8/using-npm/scripts">npm Docs - scripts</a></li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>package 文档</p><p><a href="https://yvywang.github.io/blogs/2022/03/15/package/">https://yvywang.github.io/blogs/2022/03/15/package/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Yu</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-03-15</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-03-15</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener external nofollow noreferrer" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener external nofollow noreferrer" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener external nofollow noreferrer" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/blogs/tags/package/">package</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/blogs/images/IMG_0785.JPG" alt="Alipay"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/blogs/images/IMG_0783.JPG" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/blogs/2022/03/14/js-console/"><span class="level-item">console 输出</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "d5b2b10bf0934537f6e44ebd0fc924a7",
+            repo: "blogs",
+            owner: "yvywang",
+            clientID: "1329277f33adf235b556",
+            clientSecret: "e2832e7f584d921e389a37f35797a900c183aa04",
+            admin: ["yvywang"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#概述"><span class="level-left"><span class="level-item">1</span><span class="level-item">概述</span></span></a></li><li><a class="level is-mobile" href="#Scripts-脚本"><span class="level-left"><span class="level-item">2</span><span class="level-item">Scripts 脚本</span></span></a></li><li><a class="level is-mobile" href="#参考"><span class="level-left"><span class="level-item">3</span><span class="level-item">参考</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/blogs/js/toc.js" defer></script></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=github/Ptyw&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="github/Ptyw" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div><p class="help">邮件订阅，更新早知道</p></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/blogs/"><img src="/blogs/images/y.svg" alt="Yu Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener external nofollow noreferrer">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener external nofollow noreferrer">Icarus</a><br><span id="busuanzi_container_site_uv">Visited by <span id="busuanzi_value_site_uv">0</span> users</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener external nofollow noreferrer" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener external nofollow noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener external nofollow noreferrer" title="Download on GitHub" href="https://github.com/yvywang/blogs"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/blogs/js/column.js"></script><script src="/blogs/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;" rel="external nofollow noreferrer"><i class="fas fa-chevron-up"></i></a><script src="/blogs/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/blogs/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;" rel="external nofollow noreferrer">×</a></div><div class="searchbox-body"></div></div></div><script src="/blogs/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/blogs/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
