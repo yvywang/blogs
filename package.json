@@ -3,7 +3,6 @@
   "version": "1.0.0-0",
   "private": true,
   "scripts": {
-    "preversion": "echo '你日你哥'",
     "prepare": "husky install",
     "new": "hexo new",
     "build": "hexo generate",
